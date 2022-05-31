@@ -1,11 +1,10 @@
 import type { DocsMap } from "$data/docs";
 
 export const links = {
-	discord: "kUDTrD7w3M",
-	twitter: "DeveloperWOW64",
+	discord: "PRfcdBCNRW",
 	github: {
-		owner: "DeveloperWOW64",
-		repo: "#"
+		owner: "FluentHub",
+		repo: "FluentHub"
 	}
 };
 

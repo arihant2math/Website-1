@@ -50,7 +50,7 @@
 		},
 		{
 			label: "GitHub",
-			href: `https://github.com/${ github.owner }`,
+			href: `https://github.com/${ github.owner }/${ github.repo }`,
 			icon: Code
 		}
 	];
@@ -78,15 +78,12 @@
 		type="image/svg+xml"
 	>
 	<meta
-		content="Tikka, Jupiter, DeveloperWOW64, Developer, Fluent, Svelte, Eclipse, computer, code, Codrex, Andrex, Python, XAML, Fluent-Svelte, Files, DeveloperWEB64, DeveloperDWNLD64, DownloadWEB64, "
+		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files"
 		name="keywords"
 	>
 
 	<meta content="#084840" name="theme-color">
 
-	<meta content="summary_large_image" name="twitter:card">
-	<meta content="@DeveloperWOW64" name="twitter:site">
-	<meta content="@DeveloperWOW64" name="twitter:creator">
 </svelte:head>
 
 <Navbar buttons={navbarButtons} items={navbarItems} />

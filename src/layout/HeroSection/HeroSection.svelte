@@ -3,34 +3,34 @@
 	import { Button } from "fluent-svelte";
 	import { links } from "$data/links";
 	import Code from "@fluentui/svg-icons/icons/code_24_regular.svg?raw";
-	import Folder from "@fluentui/svg-icons/icons/folder_24_regular.svg?raw";
+	import Download from "@fluentui/svg-icons/icons/arrow_download_24_regular.svg?raw";
 
 </script>
 
 <PageSection id="hero-section">
 	<div class="hero-left">
-		<h1>Hi!👋</h1>
-		<p>I'm a developer from the UK.</p>
+		<h1>FluentHub</h1>
+		<p>A stylish yet wonderfully powerful GitHub Oauth client</p>
 		<div class="buttons-spacer">
 			<Button
 				variant="accent"
-				href="https://github.com/{links.github.owner}/?tab=repositories"
+				href="https://github.com/{links.github.owner}/{links.github.repo}/blob/main/docs/build-from-source.md"
 				{...externalLink}
 			>
-				{@html Code}
+				{@html Download}
 				<div class="hero-button-inner">
-					<h5>GitHub</h5>
-					<span>Take a look at my repositories!</span>
+					<h5>Install</h5>
+					<span>Build FluentHub from source</span>
 				</div>
 			</Button>
 			<Button
 				href="https://github.com/files-community"
 				{...externalLink}
 			>
-				{@html Folder}
+				{@html Code}
 				<div class="hero-button-inner">
-					<h5>Files</h5>
-					<span>An awesome project, take a look!</span>
+					<h5>View GitHub</h5>
+					<span>FluentHub is free and open-source!</span>
 				</div>
 			</Button>
 		</div>
@@ -46,10 +46,15 @@
 					media="(prefers-color-scheme: light)"
 					srcset="/screenshots/hero-light.png"
 				>
+				<img
+					alt="FluentHub screenshot"
+					height="768"
+					src="/screenshots/hero-dark.png"
+					width="1024"
+				>
 			</picture>
 		</div>
 	</div>
-	<div class="rainbow-background" slot="outer"></div>
 </PageSection>
 <style lang="scss">
 	@use "HeroSection";

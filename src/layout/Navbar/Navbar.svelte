@@ -50,14 +50,14 @@
 					srcset="/branding/logo.png"
 				>
 				<img
-					alt="DeveloperWOW64 Logo"
+					alt="FluentHub Logo"
 					class="logo-image"
 					height="32"
 					src="/branding/logo.png"
 					width="32"
 				>
 			</picture>
-			Codrex
+			FluentHub
 		</a>
 	</nav>
 	<div class="buttons">
