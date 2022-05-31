@@ -11,30 +11,48 @@
 <PageSection id="design-section">
 	<HeaderChip>
 	<!-- svelte-ignore a11y-missing-attribute -->
-	<img src="https://img.icons8.com/fluency/workstation">
+	<img src="https://img.icons8.com/fluency/speedometer">
 	</HeaderChip>
-	<h2>DELL XPS 9300</h2>
+	<h2>Fast and fluent</h2>
 	<p>
-		The clean, fast laptop I couldn't code without
+		Coded with XAML and in-line with the Fluent design system, FluentHub's UI is truly perfect.
 	</p>
 	<div class="buttons-spacer">
 		<Button
-			href="https://dl.dell.com/topicspdf/xps-13-9300-laptop_reference-guide_en-us.pdf"
+			href="https://github.com/FluentHub/FluentHub/blob/main/docs/build-from-source.md"
 			{...externalLink}
 			variant="accent"
 		>
-			Details
+			Try it
 		</Button>
-		<Flyout>
-			<Button>
-			Price
-			</Button>
-			<svelte:fragment slot="flyout"> 
-				I got mine for £750, though it could be more pricey if it was new.
-			</svelte:fragment>
-		</Flyout>
+		<Button
+			href="https://www.microsoft.com/design/fluent/"
+			{...externalLink}
+			variant="hyperlink"
+		>
+			Design System
+		</Button>
+		
 	</div>
 	<div class="design-image">
+		<picture>
+			<source
+				media="(prefers-color-scheme: dark)"
+				srcset="/screenshots/hero-dark.png"
+			>
+			<source
+				media="(prefers-color-scheme: light)"
+				srcset="/screenshots/hero-light.png"
+			>
+			<img
+				alt="FluentHub screenshot"
+				class="files-screenshot"
+				height="384"
+				src="/screenshots/hero-dark.png"
+				style:transform="translateY({Math.floor(scrollY / -10)}px)"
+				width="512"
+			>
+		</picture>
 		<picture>
 			<source
 				media="(prefers-color-scheme: dark)"
@@ -56,5 +74,5 @@
 </PageSection>
 
 <style lang="scss">
-	@use "WorkstationSection";
+	@use "DesignSection";
 </style>
