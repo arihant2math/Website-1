@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FluxSection, WorkstationSection, Footer, HeroSection } from "$layout";
+	import { OpenSection, WorkstationSection, Footer, HeroSection } from "$layout";
 	import { Metadata } from "$lib";
 </script>
 
@@ -11,4 +11,4 @@
 
 <WorkstationSection />
 
-<FluxSection />
+<OpenSection />
