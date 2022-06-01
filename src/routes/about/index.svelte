@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<Metadata title="Codrex | About" image="about" />
+	<Metadata title="FluentHub | About" image="about" />
 </svelte:head>
 
 <svelte:window on:scroll={() => window.requestAnimationFrame(() => scrollY = window.scrollY )} />
@@ -24,23 +24,27 @@
 		>
 	</div>
 	<div class="main-post">
-		<img
-			alt="Cats"
-			src="/about-resources/cats.png"
-		>
+		<picture>
+			<source
+				media="(prefers-color-scheme: dark)"
+				srcset="/screenshots/hero-dark.png"
+			>
+			<source
+				media="(prefers-color-scheme: light)"
+				srcset="/screenshots/hero-light.png"
+			>
+			<img
+				alt="FluentHub screenshot"
+				height="768"
+				src="/screenshots/hero-dark.png"
+				width="1024"
+			>
+		</picture>
 		<div class="about">
-			<h3>Hello. I'm a developer.</h3>
+			<h3>What is FluentHub?</h3>
 			<p>
-				Welcome! My name is Jupiter. My pronouns are 'he/him'. I currently know bits of XAML, Python and Svelte.
-				Obviously, nobody is infallible and so I may make mistakes. If such an event occurs, feel free to tell me - I wouldn't be hurt.
-				Here's an interesting fact about me.. I can recite π to 16 decimal places: 3.1415926535897932.
-			</p>
-			<p>	
-				Something I like to do while I'm not sitting down at my DELL XPS laptop is listen to music - just get lost in the wave of sounds.
-				My favourite movie right now is by far Encanto of Disney. My favourite video game would be Miitopia.
-			</p>
-			<p>
-				By the way, those cats' names are Hope and Joy, my great-aunt's sister cats. The're both very cute - though Hope can get up to a lot of trouble..
+				FluentHub is an amazing project founded by <a href="https://github.com/onein528">@onein528</a>, a Japanese developer.
+				FluentHub largely respects the <a href="https://github.com/files-community">Files Community</a> and part of it is based on it.
 			</p>
 		</div>
 	</div>	

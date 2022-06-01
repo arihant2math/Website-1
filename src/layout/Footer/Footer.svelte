@@ -5,6 +5,7 @@
 	import Discord from "$static/ui/icons/discord.svg?raw";
 	import Github from "$static/ui/icons/github.svg?raw";
 	import Twitter from "$static/ui/icons/twitter.svg?raw";
+	import Sanctuary from "@fluentui/svg-icons/icons/building_24_filled.svg?raw";
 
 	let innerWidth = 649; // Don't render the mobile layout before hydrationlet sidebarVisible = false;
 	let sidebarVisible = false;
@@ -36,9 +37,9 @@
 			<picture>
 				<source media="(prefers-color-scheme: dark)" srcset="/branding/logo.png">
 				<source media="(prefers-color-scheme: light)" srcset="/branding/logo.png">
-				<img alt="DeveloperWOW64 logo" height="32" src="/branding/logo.png" width="32">
+				<img alt="FluentHub logo" height="32" src="/branding/logo.png" width="32">
 			</picture>
-			Codrex
+			FluentHub
 		</a>
 		<div class="social-links">
 			<IconButton
@@ -50,16 +51,24 @@
 				{@html Github}
 			</IconButton>
 			<IconButton
-				href="https://twitter.com/{links.twitter}/"
-				title="Twitter"
-				aria-label="Twitter"
+				href="https://discord.gg/{links.discord.server}/"
+				title="Discord Server"
+				aria-label="Discord Server"
 				{...externalLink}
 			>
-				{@html Twitter}
+				{@html Discord}
+			</IconButton>
+			<IconButton
+				href="https://discord.gg/{links.discord.sanctuary}/"
+				title="Developer Sanctuary"
+				aria-label="Developer Sanctuary"
+				{...externalLink}
+			>
+				{@html Sanctuary}
 			</IconButton>
 		</div>
 		<p></p>
-		<a href="https://vercel.app/" 
+		<a href="https://vercel.app/?utm-source=DeveloperWOW64&utm_campaign=oss" 
 			{...externalLink}
 		>
 			<picture>
@@ -69,31 +78,47 @@
 			</picture>
 		</a>
 	</div>
+	{#if innerWidth < 648}
+	<div></div>
+	{:else}
 	<div class="column">
-		{#if innerWidth < 648}
-		<div></div>
-		{:else}
+		<br/>
+		<br/>
+		<br/>
 		<picture>
 			<source
 				media="(prefers-color-scheme: dark)"
-				srcset="https://github-readme-stats.vercel.app/api?username=DeveloperWOW64&include_all_commits=true&show_icons=true&hide_border=true&theme=dark"
+				srcset="https://github-readme-stats.vercel.app/api/pin/?username=FluentHub&repo=FluentHub&theme=dark&hide_border=true"
 				
 			>
 			<source
 				media="(prefers-color-scheme: light)"
-				srcset="https://github-readme-stats.vercel.app/api?username=DeveloperWOW64&include_all_commits=true&show_icons=true&hide_border=true&theme=light"
+				srcset="https://github-readme-stats.vercel.app/api/pin/?username=FluentHub&repo=FluentHub&theme=light&hide_border=true"
 				
 			>
 			<img
 				alt="DeveloperWOW64's GitHub Status"
 				class="logo-image"
-				src="https://github-readme-stats.vercel.app/api?username=DeveloperWOW64&include_all_commits=true&show_icons=true&hide_border=true&theme=dark"
-				
+				src="https://github-readme-stats.vercel.app/api/pin/?username=FluentHub&repo=FluentHub&theme=dark&hide_border=true"
+				width="424"
 			>
 		</picture>
-		{/if}
 	</div>
-	<p> </p>
+	<div class="column">
+		<p>FluentHub Team</p>
+		<Button variant="hyperlink" sveltekit:prefetch href="https://github.com/onein528">
+			U+5BFA
+		</Button>
+		<Button variant="hyperlink" sveltekit:prefetch href="https://github.com/DeveloperWOW64">
+			DeveloperWOW64
+		</Button>
+		<Button variant="hyperlink" sveltekit:prefetch href="https://github.com/BobbyESP">
+			Gabriel Fontan
+		</Button>
+		<Button variant="hyperlink" sveltekit:prefetch href="https://github.com/luandersonn">
+			Luandersonn Airton
+		</Button>
+	</div>
 	<div class="column">
 		<p>Pages</p>
 		<Button variant="hyperlink" sveltekit:prefetch href="/">
@@ -109,6 +134,7 @@
 			About
 		</Button>
 	</div>
+	{/if}
 </PageSection>
 
 <style lang="scss">

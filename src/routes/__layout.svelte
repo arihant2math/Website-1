@@ -45,7 +45,7 @@
 	const navbarButtons = [
 		{
 			label: "Discord",
-			href: `https://discord.gg/${ discord }`,
+			href: `https://discord.gg/${ discord.server }`,
 			icon: Chat
 		},
 		{
@@ -68,7 +68,7 @@
 </script>
 
 <svelte:head>
-	<meta content="Codrex" name="og:site_name">
+	<meta content="FluentHub" name="og:site_name">
 
 	<meta content="website" name="og:type">
 

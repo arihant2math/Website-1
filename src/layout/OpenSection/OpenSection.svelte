@@ -17,7 +17,7 @@
 			</HeaderChip>
 			<h2>A thriving community</h2>
 			<p>
-				FluentHub is open-source and anyone can contribute to it. Fluenthub is made with C#, XAML and 💗.
+				FluentHub is open-source and anyone can contribute to it. Made with C#, XAML and 💗, our app has no limits.
 				Our community is what makes Fluenthub real - what point is there in an app that isn't influenced
 				by it's users and community?
 			</p>
@@ -53,7 +53,7 @@
 					{:catch err}
 						{#each Array(35) as _}
 							<Contributor
-								html_url="https://github.com/yaichenbaum"
+								html_url="https://github.com/onein528"
 								avatar_url="data:image/svg+xml;{encodeURIComponent(Profile)}"
 								contributions={0}
 							/>

@@ -12,44 +12,40 @@ export const docs: DocsMap[] = [
 	},
 	{
 		type: "category",
-		name: "Personal",
+		name: "Installation",
 		pages: [
 			{
-				name: "Overview",
-				path: "/personal"
+				name: "Building from Source",
+				path: "/get"
 			}
 		]
 	},
 	{
 		type: "category",
-		name: "Codename Depth",
+		name: "Configuration",
 		pages: [
 			{
 				name: "Overview",
-				path: "/depth"
-			},
-			{
-				name: "Asset Storage",
-				path: "/depth/assets"
+				path: "/config"
 			}
 		]
 	},
 	{
 		type: "category",
-		name: "Project Fluxduct",
+		name: "Contribution",
 		pages: [
 			{
 				name: "Overview",
-				path: "/fluxduct"
+				path: "/contrib"
 			},
 			{
-				name: "Style Rules",
-				path: "/fluxduct/style"
+				name: "Code Style",
+				path: "/contrib/style"
 			},
 			{
-				name: "Syntax",
-				path: "/fluxduct/syntax"
+				name: "ULMDF",
+				path: "/contrib/style/readme"
 			}
 		]
-	}
+	},
 ];

@@ -1,7 +1,10 @@
 import type { DocsMap } from "$data/docs";
 
 export const links = {
-	discord: "PRfcdBCNRW",
+	discord: {
+		server: "PRfcdBCNRW",
+		sanctuary: "714581497222398064/957368985647743036"
+	},
 	github: {
 		owner: "FluentHub",
 		repo: "FluentHub"

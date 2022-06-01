@@ -24,7 +24,7 @@
 				</div>
 			</Button>
 			<Button
-				href="https://github.com/files-community"
+				href="https://github.com/{links.github.owner}/"
 				{...externalLink}
 			>
 				{@html Code}
