@@ -3,10 +3,31 @@
 	import { externalLink, HeaderChip, PageSection } from "$lib";
 	import { Button, Flyout } from "fluent-svelte";
 
+	let innerWidth = 649; // Don't render the mobile layout before hydrationlet sidebarVisible = false;
+	let sidebarVisible = false;
+	let sidebar: HTMLElement;
+	let sidebarButton: HTMLButtonElement;
+
 	let scrollY: number;
+
+	const toggleSidebar = () => {
+		sidebarVisible = !sidebarVisible;
+	};
+
+	const handleOuterClick = (e: MouseEvent) => {
+		if (!(
+			!sidebarVisible ||
+			e.target === sidebarButton ||
+			sidebarButton.contains(e.target as Node) ||
+			e.target === sidebar ||
+			sidebar.contains(e.target as Node)
+		)) {
+			toggleSidebar();
+		}
+	}
 </script>
 
-<svelte:window on:scroll={() => window.requestAnimationFrame(() => scrollY = window.scrollY )} />
+<svelte:window bind:innerWidth on:click={handleOuterClick} />
 
 <PageSection id="design-section">
 	<HeaderChip>
@@ -17,6 +38,9 @@
 	<p>
 		FluentHub integrates GitHub's features without fuss. All you need to do is <a href="https://github.com/{links.github.owner}/{links.github.repo}/blob/main/docs/build-from-source.md">authenticate</a> and FluentHub will do the rest.
 	</p>
+	{#if innerWidth < 648}
+	<div></div>
+	{:else}
 	<div class="design-image">
 		<img
 			alt="FluentHub word-map"
@@ -27,6 +51,7 @@
 			width="-1024"
 			>
 	</div>
+	{/if}
 </PageSection>
 
 <style lang="scss">

@@ -1,7 +1,8 @@
 <script>
     import { InfoBar } from "fluent-svelte";
+	import { links } from "$data/links";
 </script>
-# 🔨 Build from source
+# 🔨 Building from source
 
 ## Preparation
 
@@ -21,7 +22,7 @@ This application uses a method called Oauth, so you must independently get a cli
     message="Since this method is cumbersome for an open source app, we plan to remove this process in the future by exposing our own API, which is currently private."
 />
 
-##### 1.  Create an [OAuth app](https://github.com/settings/developers):
+##### 1.  Create an [OAuth app](https://github.com/settings/developers/new):
 
 		![image](https://user-images.githubusercontent.com/62196528/161755644-1de8e2ec-ddea-4b47-ae14-bc3c326a33f8.png)
 
@@ -34,10 +35,13 @@ This application uses a method called Oauth, so you must independently get a cli
 		|Application logo|Use [this](https://github.com/fluenthub-community/FluentHub/blob/main/src/FluentHub/Assets/AppTiles/StoreLogo.scale-400.png)|True|
 		|Badge background color|`#FFFFFF`|True however value is custom|
 
- 2.  Create a file named `AppCredentials.config` in the root of your FluentHub repo with the VS Solution Explorer
- 3.  Set the `id` and `secret` value as that of your app
+		![image](https://user-images.githubusercontent.com/62196528/161756202-8c269cc3-a955-402e-a40e-f143b6b36fc6.png)
 
-		```xml
+##### 2.  Create a file named `AppCredentials.config` in the root of your FluentHub repo with the VS Solution Explorer.
+
+##### 3.  Set the `id` and `secret` value as that of your app.
+
+```xml
 		<?xml version="1.0" encoding="utf-8" ?>
 		<configuration>
 		    <client>
@@ -45,8 +49,12 @@ This application uses a method called Oauth, so you must independently get a cli
 		        <type key="secret" value="YOUR-APP-SECRET"/>
 		    </client>
 		</configuration>
-		```
+```
 
-		![image](https://user-images.githubusercontent.com/62196528/161758514-350c2d44-8ffc-402a-b67e-4ccc48c706df.png)
+##### 4. Set the startup project to "FluentHub" rather than "FluentHub.Octokit".
 
-		![image](https://user-images.githubusercontent.com/62196528/161756202-8c269cc3-a955-402e-a40e-f143b6b36fc6.png)	
+##### 5. Run in Debug.
+
+## 🎉 You have successfully built FluentHub.
+
+###### If you are unable to build successfully, please let us know via our [Discord server](https://discord.com/{links.discord.server}).

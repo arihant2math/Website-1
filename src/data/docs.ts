@@ -44,7 +44,7 @@ export const docs: DocsMap[] = [
 			},
 			{
 				name: "ULMDF",
-				path: "/contrib/style/readme"
+				path: "/contrib/style/md"
 			}
 		]
 	},

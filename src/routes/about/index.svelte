@@ -25,25 +25,24 @@
 	</div>
 	<div class="main-post">
 		<picture>
-			<source
-				media="(prefers-color-scheme: dark)"
-				srcset="/screenshots/hero-dark.png"
-			>
-			<source
-				media="(prefers-color-scheme: light)"
-				srcset="/screenshots/hero-light.png"
-			>
 			<img
 				alt="FluentHub screenshot"
 				height="768"
-				src="/screenshots/hero-dark.png"
+				src="https://github.com/onein528.png"
 				width="1024"
 			>
 		</picture>
 		<div class="about">
 			<h3>What is FluentHub?</h3>
 			<p>
-				FluentHub is an amazing project founded by <a href="https://github.com/onein528">@onein528</a>, a Japanese developer.
+				FluentHub is an amazing project founded by the current lead developer, <a href="https://github.com/onein528">Tomoyuki Terashita</a>, who is Japanese.
+				He decided to view the source-code of the <a href="https://github.com/files-community/files">Files</a> project and get inspiration from it, as well
+				as simply learning to code C#, rather than studying. The problem FluentHub solved was the fact that there was no GitHub client with Microsoft Fluent
+				Design significantly publicised. Another reason he created FluentHub was because it was a good goal for his education to create a usable GitHub
+				that was both fast and fluent.
+				From then on, FluentHub has grown spectacularly, with over one hundred stars on GitHub.
+			</p>
+			<p>
 				FluentHub largely respects the <a href="https://github.com/files-community">Files Community</a> and part of it is based on it.
 			</p>
 		</div>
