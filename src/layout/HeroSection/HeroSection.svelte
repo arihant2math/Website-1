@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { externalLink, PageSection } from "$lib";
-	import { Button } from "fluent-svelte";
+	import { Button, TextBlock } from "fluent-svelte";
 	import { links } from "$data/links";
 	import Code from "@fluentui/svg-icons/icons/code_24_regular.svg?raw";
 	import Download from "@fluentui/svg-icons/icons/arrow_download_24_regular.svg?raw";
@@ -11,6 +11,8 @@
 	<div class="hero-left">
 		<h1>FluentHub</h1>
 		<p>A stylish yet wonderfully powerful GitHub Oauth client</p>
+		<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
+		<br/>
 		<div class="buttons-spacer">
 			<Button
 				variant="accent"

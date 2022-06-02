@@ -3,7 +3,7 @@
 
 <script lang="ts">
 	import { PageSection, Metadata } from "$lib";
-
+	import { TextBlock } from "fluent-svelte"
 
 	let scrollY: number;
 </script>
@@ -46,6 +46,8 @@
 				FluentHub largely respects the <a href="https://github.com/files-community">Files Community</a> and part of it is based on it.
 			</p>
 		</div>
+		<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
+		<br/>
 	</div>	
 </PageSection>
 

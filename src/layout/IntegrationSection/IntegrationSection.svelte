@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { links } from "$data/links";
+	import { dev } from "$app/env";
 	import { externalLink, HeaderChip, PageSection } from "$lib";
-	import { Button, Flyout } from "fluent-svelte";
+	import { TextBlock } from "fluent-svelte";
 
 	let innerWidth = 649; // Don't render the mobile layout before hydrationlet sidebarVisible = false;
 	let sidebarVisible = false;
@@ -38,6 +39,10 @@
 	<p>
 		FluentHub integrates GitHub's features without fuss. No faff, no unnecessary scripting.
 	</p>
+	{#if dev}
+		<TextBlock variant="caption">src/layout/IntegrationSection/IntegrationSection.svelte</TextBlock>
+		<br/>
+	{/if}
 	{#if innerWidth < 648}
 	<div></div>
 	{:else}

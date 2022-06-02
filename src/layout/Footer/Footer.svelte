@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { externalLink, PageSection } from "$lib";
+	import { dev } from "$app/env";
 	import { Button, IconButton } from "fluent-svelte";
 	import { links } from "$data/links";
 	import Discord from "$static/ui/icons/discord.svg?raw";
 	import Github from "$static/ui/icons/github.svg?raw";
-	import Twitter from "$static/ui/icons/twitter.svg?raw";
+	import Toolbox from "@fluentui/svg-icons/icons/toolbox_24_filled.svg?raw";
+	import Test from "@fluentui/svg-icons/icons/wrench_24_filled.svg?raw";
 	import Sanctuary from "@fluentui/svg-icons/icons/building_24_filled.svg?raw";
 
 	let innerWidth = 649; // Don't render the mobile layout before hydrationlet sidebarVisible = false;
@@ -34,12 +36,17 @@
 <PageSection type="footer" id="page-footer">
 	<div class="column">
 		<a class="logo" href="/" sveltekit:prefetch>
+			{#if dev}
 			<picture>
-				<source media="(prefers-color-scheme: dark)" srcset="/branding/logo.png">
-				<source media="(prefers-color-scheme: light)" srcset="/branding/logo.png">
+				<img alt="FluentHub logo" height="32" src="/branding/dev.png" width="32">
+			</picture>
+			Developer
+			{:else}
+			<picture>
 				<img alt="FluentHub logo" height="32" src="/branding/logo.png" width="32">
 			</picture>
 			FluentHub
+			{/if}
 		</a>
 		<div class="social-links">
 			<IconButton
@@ -66,6 +73,24 @@
 			>
 				{@html Sanctuary}
 			</IconButton>
+			{#if dev}
+			<IconButton
+				href="https://fluent-svelte.vercel.app/docs"
+				title="Fluent-Svelte Docs"
+				aria-label="Fluent-Svelte Docs"
+				{...externalLink}
+			>
+				{@html Toolbox}
+			</IconButton>
+			<IconButton
+				href="https://fluent-svelte.vercel.app/test"
+				title="Fluent-Svelte REPL"
+				aria-label="Fluent-Svelte REPL"
+				{...externalLink}
+			>
+				{@html Test}
+			</IconButton>
+			{/if}
 		</div>
 		<p></p>
 		<a href="https://vercel.app/?utm-source=DeveloperWOW64&utm_campaign=oss" 
@@ -77,6 +102,9 @@
 				<img alt= "Powered by Vercel" src="/branding/logo.png" width="192">
 			</picture>
 		</a>
+		{#if dev}
+		<p>You are using FluentHub in Dev mode.</p>
+		{/if}
 	</div>
 	{#if innerWidth < 648}
 	<div></div>

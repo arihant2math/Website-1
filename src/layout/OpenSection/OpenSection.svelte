@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { getContributors } from "$data/community";
+	import { dev } from "$app/env";
 	import { links } from "$data/links";
 	import { Contributor, HeaderChip, PageSection } from "$lib";
-	import { Button } from "fluent-svelte";
+	import { Button, TextBlock } from "fluent-svelte";
 	import Profile from "@fluentui/svg-icons/icons/person_32_filled.svg?raw";
 	// Fetch contributors for the community section
 	const contributorRows = [getContributors(1), getContributors(2), getContributors(3)]
@@ -21,6 +22,10 @@
 				Our community is what makes Fluenthub real - what point is there in an app that isn't influenced
 				by it's users and community?
 			</p>
+			{#if dev}
+			<TextBlock variant="caption">src/layout/OpenSection/OpenSection.svelte</TextBlock>
+			<br/>
+			{/if}
 			<div class="buttons-spacer">
 				<Button variant="hyperlink" href="https://discord.gg/{links.discord.server}">
 					Join the discussion

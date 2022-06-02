@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { navigating, page } from "$app/stores";
+	import { dev } from "$app/env";
 	import type { NavbarItem } from "$data/links";
 
 	import { externalLink, TreeView } from "$lib";
-	import { ListItem, Tooltip } from "fluent-svelte";
+	import { ListItem, Tooltip, TextBlock } from "fluent-svelte";
 	import Navigation from "@fluentui/svg-icons/icons/navigation_24_regular.svg?raw";
 	
 	export let items: NavbarItem[] = [];
@@ -39,16 +40,23 @@
 
 <header class="navbar">
 	<nav class="inner">
+		{#if dev}
 		<a class="logo" href="/" sveltekit:prefetch>
 			<picture>
-				<source
-					media="(prefers-color-scheme: dark)"
-					srcset="/branding/logo.png"
+				<img
+					alt="FluentHub Logo"
+					class="logo-image"
+					height="32"
+					src="/branding/dev.png"
+					width="32"
 				>
-				<source
-					media="(prefers-color-scheme: light)"
-					srcset="/branding/logo.png"
-				>
+			</picture>
+			FluentHub Dev
+			<TextBlock variant="caption">src/layout/NavBar/NavBar.svelte</TextBlock>
+		</a>
+		{:else}
+		<a class="logo" href="/" sveltekit:prefetch>
+			<picture>
 				<img
 					alt="FluentHub Logo"
 					class="logo-image"
@@ -59,6 +67,7 @@
 			</picture>
 			FluentHub
 		</a>
+		{/if}
 	</nav>
 	<div class="buttons">
 		{#if innerWidth > 648}

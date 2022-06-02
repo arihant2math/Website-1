@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { links } from "$data/links";
+	import { dev } from "$app/env";
 	import { externalLink, HeaderChip, PageSection } from "$lib";
-	import { Button, Flyout } from "fluent-svelte";
+	import { Button, TextBlock } from "fluent-svelte";
 
 	let scrollY: number;
 </script>
@@ -17,6 +18,10 @@
 	<p>
 		Coded with XAML and in-line with the Fluent design system, FluentHub's UI is truly perfect.
 	</p>
+	{#if dev}
+	<TextBlock variant="caption">src/layout/DesignSection/DesignSection.svelte</TextBlock>
+	{/if}
+	<br/>
 	<div class="buttons-spacer">
 		<Button
 			href="/docs/get"

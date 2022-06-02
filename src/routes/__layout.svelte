@@ -17,6 +17,7 @@
 	import Chat from "@fluentui/svg-icons/icons/chat_24_regular.svg?raw";
 	import Icons from "@fluentui/svg-icons/icons/icons_24_regular.svg?raw";
 	import Toolbox from "@fluentui/svg-icons/icons/toolbox_24_regular.svg?raw";
+	import Info from "@fluentui/svg-icons/icons/book_information_24_regular.svg?raw";
 
 	const { github, discord } = links;
 
@@ -65,7 +66,15 @@
 			icon: Toolbox
 		}
 		);
-		navbarButtons = navbarButtons;
+		navbarButtons = navbarButtons
+		navbarItems.push(
+		{
+			name: "src/routes/__layout.svelte",
+			path: "/",
+			icon: Info
+		}
+		);
+		navbarItems = navbarItems
 	}
 
 	let theme: "light" | "dark" = "light";
