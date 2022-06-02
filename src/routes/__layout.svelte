@@ -15,10 +15,12 @@
 	import News from "@fluentui/svg-icons/icons/news_24_regular.svg?raw";
 	import Person from "@fluentui/svg-icons/icons/person_24_regular.svg?raw";
 	import Chat from "@fluentui/svg-icons/icons/chat_24_regular.svg?raw";
+	import Icons from "@fluentui/svg-icons/icons/icons_24_regular.svg?raw";
+	import Toolbox from "@fluentui/svg-icons/icons/toolbox_24_regular.svg?raw";
 
 	const { github, discord } = links;
 
-	const navbarItems: NavbarItem[] = [
+	let navbarItems: NavbarItem[] = [
 		{
 			name: "Home",
 			path: "/",
@@ -31,18 +33,13 @@
 			icon: Book
 		},
 		{
-			name: "Blog",
-			path: "/blog",
-			icon: News
-		},
-		{
 			name: "About",
 			path: "/about",
 			icon: Person
 		}
 	];
 
-	const navbarButtons = [
+	let navbarButtons = [
 		{
 			label: "Discord",
 			href: `https://discord.gg/${ discord.server }`,
@@ -54,6 +51,22 @@
 			icon: Code
 		}
 	];
+
+	
+	if (dev) {
+		navbarButtons.push({
+			label: "Icons",
+			href: "https://fluenticons.co",
+			icon: Icons
+		},
+		{
+			label: "Fluent-Svelte Docs",
+			href: "https://fluent-svelte.vercel.app",
+			icon: Toolbox
+		}
+		);
+		navbarButtons = navbarButtons;
+	}
 
 	let theme: "light" | "dark" = "light";
 
@@ -78,7 +91,7 @@
 		type="image/svg+xml"
 	>
 	<meta
-		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files"
+		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files, onein528, Fluent Design, stylish, winui"
 		name="keywords"
 	>
 
