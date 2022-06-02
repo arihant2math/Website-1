@@ -14,7 +14,7 @@
 		<div class="buttons-spacer">
 			<Button
 				variant="accent"
-				href="https://github.com/{links.github.owner}/{links.github.repo}/blob/main/docs/build-from-source.md"
+				href="/docs/get"
 				{...externalLink}
 			>
 				{@html Download}

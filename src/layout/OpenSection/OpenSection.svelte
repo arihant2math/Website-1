@@ -22,7 +22,7 @@
 				by it's users and community?
 			</p>
 			<div class="buttons-spacer">
-				<Button variant="hyperlink" href="https://discord.gg/{links.discord}">
+				<Button variant="hyperlink" href="https://discord.gg/{links.discord.server}">
 					Join the discussion
 				</Button>
 				<Button variant="hyperlink" href="https://github.com/FluentHub/Fluenthub">

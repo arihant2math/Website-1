@@ -19,7 +19,7 @@
 	</p>
 	<div class="buttons-spacer">
 		<Button
-			href="https://github.com/FluentHub/FluentHub/blob/main/docs/build-from-source.md"
+			href="/docs/get"
 			{...externalLink}
 			variant="accent"
 		>

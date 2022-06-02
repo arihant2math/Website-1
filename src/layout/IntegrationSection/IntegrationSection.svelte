@@ -36,7 +36,7 @@
 	</HeaderChip>
 	<h2>Integration without the fuss</h2>
 	<p>
-		FluentHub integrates GitHub's features without fuss. All you need to do is <a href="https://github.com/{links.github.owner}/{links.github.repo}/blob/main/docs/build-from-source.md">authenticate</a> and FluentHub will do the rest.
+		FluentHub integrates GitHub's features without fuss. No faff, no unnecessary scripting.
 	</p>
 	{#if innerWidth < 648}
 	<div></div>
