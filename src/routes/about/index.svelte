@@ -38,7 +38,7 @@
 				FluentHub is an amazing project founded by the current lead developer, <a href="https://github.com/onein528">Tomoyuki Terashita</a>, who is Japanese.
 				He decided to view the source-code of the <a href="https://github.com/files-community/files">Files</a> project and get inspiration from it, as well
 				as simply learning to code C#, rather than studying. The problem FluentHub solved was the fact that there was no GitHub client with Microsoft Fluent
-				Design significantly publicised. Another reason he created FluentHub was because it was a good goal for his education to create a usable GitHub
+				Design significantly publicised. Another reason he created FluentHub was because it was a good goal for his education to create a usable GitHub client
 				that was both fast and fluent.
 				From then on, FluentHub has grown spectacularly, with over one hundred stars on GitHub.
 			</p>
