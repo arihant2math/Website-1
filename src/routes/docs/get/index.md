@@ -4,9 +4,9 @@
 </script>
 # 🔨 Building from source
 
-## Preparation
+## Prerequisites
 
-Make sure these packages are local:
+Make sure these packages are installed:
 
 - Visual Studio 2022 and Windows SDK.
 - UWP Development Kit

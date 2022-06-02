@@ -1,4 +1,4 @@
-# 🏛️ Style guidelines
+# ✒️ Style guidelines
 
 ##### - Follow the Model-View-View-Model (MVVM) design convention.
 ##### - The code must be well-written and expose a clear purpose.

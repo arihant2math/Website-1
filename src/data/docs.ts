@@ -1,7 +1,7 @@
 export type DocsMap = {
 	name: string;
 	path?: string;
-	type?: "page" | "category";
+	type?: "page" | "category" | "secret";
 	pages?: DocsMap[];
 };
 
@@ -22,16 +22,6 @@ export const docs: DocsMap[] = [
 	},
 	{
 		type: "category",
-		name: "Configuration",
-		pages: [
-			{
-				name: "Overview",
-				path: "/config"
-			}
-		]
-	},
-	{
-		type: "category",
 		name: "Contribution",
 		pages: [
 			{
@@ -39,12 +29,22 @@ export const docs: DocsMap[] = [
 				path: "/contrib"
 			},
 			{
-				name: "Code Style",
-				path: "/contrib/style"
+				type: "category",
+				name: "Style",
+				pages: [
+					{
+						name: "Code",
+						path: "/contrib/style"
+					},
+					{
+						name: "Markdown",
+						path: "/contrib/style/md"
+					}
+				]
 			},
 			{
-				name: "ULMDF",
-				path: "/contrib/style/md"
+				name: "Translating",
+				path: "/contrib/locale"
 			}
 		]
 	},

@@ -97,7 +97,7 @@
 				
 			>
 			<img
-				alt="DeveloperWOW64's GitHub Status"
+				alt="GitHub Status"
 				class="logo-image"
 				src="https://github-readme-stats.vercel.app/api/pin/?username=FluentHub&repo=FluentHub&theme=dark&hide_border=true"
 				width="424"

@@ -1,8 +1,9 @@
-# 🏛️ ULMDF - Universal Laws of Markdown Formatting
+# ✒️ Universal Law of Markdown Formatting
 
 All README's and markdown files must be created with this template and key:
 
 ###### Template:
+
 ```
 # 📎 Rules Example
 
@@ -14,6 +15,7 @@ Lorem ipsum dolor sit amet nonummy justo consequat kasd tempor dolores.
 
 Lorem ipsum dolor sit amet nulla lorem sed facer sea erat.
 ```
+
 ###### Key:
 
 # `#` Headings/Names
