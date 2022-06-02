@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { dev } from "$app/env";
 	import { externalLink, PageSection } from "$lib";
 	import { Button, TextBlock } from "fluent-svelte";
 	import { links } from "$data/links";
@@ -11,8 +12,10 @@
 	<div class="hero-left">
 		<h1>FluentHub</h1>
 		<p>A stylish yet wonderfully powerful GitHub Oauth client</p>
-		<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
-		<br/>
+		{#if dev}
+			<TextBlock variant="caption">src/layout/DesignSection/DesignSection.svelte</TextBlock>
+			<br/>
+		{/if}
 		<div class="buttons-spacer">
 			<Button
 				variant="accent"

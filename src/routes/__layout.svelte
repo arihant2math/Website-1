@@ -94,11 +94,19 @@
 
 	<meta content="website" name="og:type">
 
+	{#if dev}
+	<link
+		href="/branding/dev.png"
+		rel="icon"
+		type="image/svg+xml"
+	>
+	{:else}
 	<link
 		href="/branding/logo.png"
 		rel="icon"
 		type="image/svg+xml"
 	>
+	{/if}
 	<meta
 		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files, onein528, Fluent Design, stylish, winui"
 		name="keywords"

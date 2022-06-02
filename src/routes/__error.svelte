@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
 	import type { ErrorLoad } from "@sveltejs/kit";
+	import { dev } from "$app/env";
 	export const load: ErrorLoad = ({ error, status }) => {
 		return {
 			props: {
@@ -22,11 +23,18 @@
 
 <section class="error-page">
 	<ContentDialog open title="Uh Oh!">
+		{#if dev}
+			Looks like something went wrong.
+			Come on, you're a developer, you know what to do.
+			<br/>
+		{:else}
 		Looks like something went wrong.
 		<br/>
+		{/if}
 		<TextBlock variant="bodyStrong">
 			{error.message}
 		</TextBlock>
+		
 		<svelte:fragment slot="footer">
 		<Button href="/">
 			Return Home
