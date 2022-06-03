@@ -13,7 +13,7 @@
 		<h1>FluentHub</h1>
 		<p>A stylish yet wonderfully powerful GitHub Oauth client</p>
 		{#if dev}
-			<TextBlock variant="caption">src/layout/DesignSection/DesignSection.svelte</TextBlock>
+			<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
 			<br/>
 		{/if}
 		<div class="buttons-spacer">

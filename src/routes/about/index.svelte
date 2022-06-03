@@ -2,6 +2,7 @@
 </script>
 
 <script lang="ts">
+	import { dev } from "$app/env";
 	import { PageSection, Metadata } from "$lib";
 	import { TextBlock } from "fluent-svelte"
 
@@ -46,7 +47,9 @@
 				FluentHub largely respects the <a href="https://github.com/files-community">Files Community</a> and part of it is based on it.
 			</p>
 		</div>
+		{#if dev}
 		<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
+		{/if}
 		<br/>
 	</div>	
 </PageSection>

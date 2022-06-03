@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { externalLink, PageSection } from "$lib";
 	import { dev } from "$app/env";
-	import { Button, IconButton } from "fluent-svelte";
+	import { Button, IconButton, TextBlock, Flyout } from "fluent-svelte";
 	import { links } from "$data/links";
 	import Discord from "$static/ui/icons/discord.svg?raw";
 	import Github from "$static/ui/icons/github.svg?raw";
 	import Toolbox from "@fluentui/svg-icons/icons/toolbox_24_filled.svg?raw";
 	import Test from "@fluentui/svg-icons/icons/wrench_24_filled.svg?raw";
 	import Sanctuary from "@fluentui/svg-icons/icons/building_24_filled.svg?raw";
+	import Info from "@fluentui/svg-icons/icons/info_24_filled.svg?raw";
 
 	let innerWidth = 649; // Don't render the mobile layout before hydrationlet sidebarVisible = false;
 	let sidebarVisible = false;
@@ -90,9 +91,18 @@
 			>
 				{@html Test}
 			</IconButton>
+			<Flyout>
+				<IconButton
+					title="src/routes/__layout.svelte"
+					aria-label="src/routes/__layout.svelte"
+				>
+					{@html Info}
+				</IconButton>
+				<svelte:fragment slot="flyout">src/routes/__layout.svelte</svelte:fragment>
+			</Flyout>
 			{/if}
 		</div>
-		<p></p>
+		<br/>
 		<a href="https://vercel.app/?utm-source=DeveloperWOW64&utm_campaign=oss" 
 			{...externalLink}
 		>
@@ -104,6 +114,8 @@
 		</a>
 		{#if dev}
 		<p>You are using FluentHub in Dev mode.</p>
+		<br/>
+		<TextBlock variant="caption">src/layout/Footer/Footer.svelte</TextBlock>
 		{/if}
 	</div>
 	{#if innerWidth < 648}
