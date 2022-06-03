@@ -108,7 +108,7 @@
 	>
 	{/if}
 	<meta
-		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files, onein528, Fluent Design, stylish, winui"
+		content="FluentHub, FH, Developer, Fluent, Svelte, computer, code, Codrex, XAML, C#, Fluent-Svelte, Files, onein528, Fluent Design, stylish, winui, GitHub"
 		name="keywords"
 	>
 
