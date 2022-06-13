@@ -153,7 +153,7 @@ Similarly to docs pages, the blog also uses markdown. Blog posts are located at 
 
 To publish a post, create a new `md` file in the [`posts`](https://github.com/DeveloperWOW64/FHWebsite/tree/main/src/blog/posts) folder. At the top of a the file, you'll need to include a few required things before typing the post.
 
-```md
+```yml
 ---
 title: Title of the Post
 author: gh-username-author
