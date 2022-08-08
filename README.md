@@ -173,6 +173,6 @@ Since we don't need any mapping to be updated, posts can simply be deleted from 
 
 Want to contribute to this project? Feel free to open an [issue](/issues) or [pull request](/pulls).
 
-<a href="https://github.com/DeveloperWOW64/Website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DeveloperWOW64/FHWebsite" />
+<a href="https://github.com/FluentHub/Website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FluentHub/Website" />
 </a>
