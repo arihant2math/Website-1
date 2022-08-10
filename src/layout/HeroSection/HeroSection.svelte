@@ -11,7 +11,7 @@
 <PageSection id="hero-section">
 	<div class="hero-left">
 		<h1>FluentHub</h1>
-		<p>A stylish yet wonderfully powerful GitHub Oauth client</p>
+		<p>A stylish yet powerful GitHub client</p>
 		{#if dev}
 			<TextBlock variant="caption">src/layout/HeroSection/HeroSection.svelte</TextBlock>
 			<br/>
