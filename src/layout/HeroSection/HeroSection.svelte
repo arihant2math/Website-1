@@ -19,13 +19,13 @@
 		<div class="buttons-spacer">
 			<Button
 				variant="accent"
-				href="/docs/get"
+				href="https://apps.microsoft.com/store/detail/fluenthub-dev/9nkb9hx8rjz3"
 				{...externalLink}
 			>
 				{@html Download}
 				<div class="hero-button-inner">
 					<h5>Install</h5>
-					<span>Build FluentHub from source</span>
+					<span>Get it from the Store</span>
 				</div>
 			</Button>
 			<Button
